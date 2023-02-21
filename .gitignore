@@ -1,0 +1,16 @@
+target/
+src-gen/
+bin/
+logs/
+.antlr*
+.metadata/
+*/plugin.xml_gen
+.DS_Store
+*.iml
+.idea/
+dependency-reduced-pom.xml
+*.orig
+generated/
+userdata/
+*/application-local.properties
+

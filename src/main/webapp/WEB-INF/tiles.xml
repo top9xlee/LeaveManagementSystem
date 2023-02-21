@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- Base Define -->
+    <definition name="base.definition"
+                template="/WEB-INF/layouts/classic.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/basefragments/_header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/basefragments/_menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/basefragments/_footer.jsp" />
+    </definition>
+
+
+
+    <definition name="loginPage" template="/WEB-INF/security/loginPage.jsp">
+    </definition>
+    <definition name="forgetPassword" template="/WEB-INF/bodyfragments/user/_forgetPassword.jsp">
+    </definition>
+    <definition name="changePassword" template="/WEB-INF/bodyfragments/user/_changePassword.jsp">
+    </definition>
+    <!-- Home Page  -->
+    <definition name="homePage" extends="base.definition">
+        <put-attribute name="title" value="Home Page" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_home.jsp" />
+    </definition>
+
+    <!-- Absence Page -->
+    <definition name="createPost" extends="base.definition">
+        <put-attribute name="title" value="Tạo Đơn xin nghỉ" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_createPost.jsp" />
+    </definition>
+    <definition name="listNonenableByDepartmentId" extends="base.definition">
+        <put-attribute name="title" value="Trang Duyệt đơn" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listNonEnablePost.jsp" />
+    </definition>
+    <definition name="listPostEnabledByDepartmentId" extends="base.definition">
+        <put-attribute name="title" value="Trang lịch sử duyệt đơn" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listPostEnabled.jsp" />
+    </definition>
+    <definition name="listPostDepartmentId" extends="base.definition">
+        <put-attribute name="title" value="Trang lịch sử duyệt đơn" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listPost.jsp" />
+    </definition>
+    <definition name="listPostRejectedByDepartmentId" extends="base.definition">
+        <put-attribute name="title" value="Trang lịch sử duyệt đơn" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listPostRejected.jsp" />
+    </definition>
+    <!--Department Page-->
+    <definition name="department" extends="base.definition">
+        <put-attribute name="title" value="Phòng ban" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/department/_department.jsp" />
+    </definition>
+    <definition name="createDepartment" extends="base.definition">
+        <put-attribute name="title" value="Tạo phòng ban" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/department/_createDepartment.jsp" />
+    </definition>
+    <definition name="updateDepartment" extends="base.definition">
+        <put-attribute name="title" value="Cập nhật Phòng ban" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/department/_updateDepartment.jsp" />
+    </definition>
+    <!--Holiday Page-->
+    <definition name="create-Holiday" extends="base.definition">
+        <put-attribute name="title" value="Tạo ngày nghỉ lễ̉ " />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/holiday/_Holidays.jsp" />
+    </definition>
+    <definition name="update-Holidays" extends="base.definition">
+        <put-attribute name="title" value="Cập nhật ngày nghỉ lễ" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/holiday/_updateHoliday.jsp" />
+    </definition>
+    <!--ManagerPage-->
+    <definition name="export" extends="base.definition">
+        <put-attribute name="title" value="Báo cáo Page" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_export.jsp"/>
+    </definition>
+    <!--UserPage-->
+    <definition name="listUser" extends="base.definition">
+        <put-attribute name="title" value="list user" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/listUser.jsp" />
+    </definition>
+
+    <definition name="user" extends="base.definition">
+        <put-attribute name="title" value="Báo cáo Page" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/user/_user.jsp"/>
+    </definition>
+    <!--telegramPage-->
+    <definition name="telegram" extends="base.definition">
+        <put-attribute name="title" value="telegramF" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_telegram.jsp" />
+    </definition>
+
+    <definition name="updateTelegram" extends="base.definition">
+        <put-attribute name="title" value="Cập nhật Group" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_updateTelegram.jsp" />
+    </definition>
+    <!--403 Forbidden -->
+    <definition name="403" extends="base.definition">
+        <put-attribute name="title" value="Không đủ quyền" />
+        <put-attribute name="body" value="/WEB-INF/security/_403.jsp"/>
+    </definition>
+<!--    <definition name="changePassword" extends="base.definition">-->
+<!--        <put-attribute name="title" value="Báo cáo Page" />-->
+<!--        <put-attribute name="body" value="/WEB-INF/bodyfragments/user/_changePassword.jsp"/>-->
+<!--    </definition>-->
+
+
+    <definition name="contactusPage" extends="base.definition">
+        <put-attribute name="title" value="Contact Us" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_contactus.jsp" />
+    </definition>
+
+    <definition name="welcomePage" extends="base.definition">
+        <put-attribute name="title" value="welcomePage" />
+        <put-attribute name="body" value="/WEB-INF/security/welcomePage.jsp" />
+    </definition>
+
+    <definition name="adminPage" extends="base.definition">
+        <put-attribute name="title" value="adminPage" />
+        <put-attribute name="body" value="/WEB-INF/security/adminPage.jsp" />
+    </definition>
+
+
+
+    <definition name="UserInfoPage" extends="base.definition">
+        <put-attribute name="title" value="UserInfoPage" />
+        <put-attribute name="body" value="/WEB-INF/security/UserInfoPage.jsp" />
+    </definition>
+
+    <definition name="logoutSuccessfulPage" extends="base.definition">
+        <put-attribute name="title" value="logoutSuccessfulPage" />
+        <put-attribute name="body" value="/WEB-INF/security/logoutSuccessfulPage.jsp" />
+    </definition>
+
+    <definition name="managerPage" extends="base.definition">
+        <put-attribute name="title" value="managerPage" />
+        <put-attribute name="body" value="/WEB-INF/security/managerPage.jsp" />
+    </definition>
+
+    <definition name="personnelPage" extends="base.definition">
+        <put-attribute name="title" value="personnelPage" />
+        <put-attribute name="body" value="/WEB-INF/security/personnelPage.jsp" />
+    </definition>
+
+    <definition name="userEntity" extends="base.definition">
+        <put-attribute name="title" value="Tạo tài khoản" />
+        <put-attribute name="body" value="/WEB-INF/security/userEntity.jsp" />
+    </definition>
+
+    <definition name="changepw" extends="base.definition">
+        <put-attribute name="title" value="Thay đổi mật khẩu" />
+        <put-attribute name="body" value="/WEB-INF/security/changepw.jsp" />
+    </definition>
+
+    <definition name="forgetpw" extends="base.definition">
+        <put-attribute name="title" value="forgetpw" />
+        <put-attribute name="body" value="/WEB-INF/security/forgetpw.jsp" />
+    </definition>
+
+
+</tiles-definitions>
